@@ -7,7 +7,7 @@ import FormB from '../FormB/index'
 
 
 
-class Display extends React.Component {
+class Landing extends React.Component {
     state = {
         form: "Form1"
     };
@@ -42,5 +42,5 @@ render () {
 }
 }
 
-export default Display;
+export default Landing;
 

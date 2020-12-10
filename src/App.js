@@ -1,11 +1,11 @@
 import React from 'react';
-import Display from './components/Display/index'
+import Landing from './components/Landing/index'
 
 
 function App () {
   return (
     <div className="">
-      <Display />
+      <Landing />
     </div>
   )
 }

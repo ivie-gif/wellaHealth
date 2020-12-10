@@ -8,8 +8,8 @@ import axios from 'axios';
 export default function FormA({toggle}) {
     const iniState = {
         phoneNumber : '',
-        pharmacyName: '',
-        pharmacyAddress: ''
+        emailAddress: '',
+        location: ''
     }; 
 
 const [state, setState] = useState (iniState);
@@ -34,18 +34,18 @@ const handleSubmit = (e) => {
     return (
         
             <div className="order-1 order-md-2 col-12 col-md-6 forms">
-            <h1>
+            <h3>
                 Check and record your blood pressure to get personalised advice to 
-                avoid stroke and heart attack
-            </h1>
-            <h4>Also get discounts on medications at partner pharmacies nationwide
-            </h4>
+                avoid stroke and heart attack.
+            </h3>
+            <h6>Also get discounts on medications at partner <br/> pharmacies nationwide
+            </h6>
             {/* form */}
             <form className="form-group" onSubmit={handleSubmit}>
-            <input onChange={handleChange} type="text" className="form-control" name="phoneNumber" placeholder="Mobile Number" />
-            <input onChange={handleChange} type="text" className="form-control" name="pharmacyName" placeholder="Pharmacy Name" />
-            <input onChange={handleChange} type="text" className="form-control" name="pharmacyAddress" placeholder="Pharmacy Address" />
-            <button type="Submit" className="btn btn-success">
+            <input onChange={handleChange} type="tel" className="form-control" name="phoneNumber" placeholder="Mobile Number" required={true} />
+            <input onChange={handleChange} type="email" className="form-control" name="emailAddress" placeholder="Email Address" required={true} />
+            <input onChange={handleChange} type="text" className="form-control" name="location" placeholder="Location" required={true} />
+            <button type="Submit" className="btn btn-success ">
                 Get Started
             </button>
             </form>
